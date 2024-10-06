@@ -1,0 +1,80 @@
+body {
+    background-color: black;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.terminal {
+    text-align: left;
+    width: 80%;
+}
+
+.hidden {
+    display: none;
+}
+
+.reveal {
+    display: block;
+}
+
+.popup {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 2px solid #ff0000;
+    padding: 20px;
+    width: 300px;
+    height: 200px;
+    z-index: 10;
+    animation: fadeIn 0.5s ease-in-out, moveWindow 1s linear infinite;
+}
+
+.username {
+    color: #ff0000;
+}
+
+.cursor {
+    border-left: 2px solid #00ff00;
+    animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes progress {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+
+@keyframes moveWindow {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(20px, 10px); }
+    50% { transform: translate(-10px, 30px); }
+    75% { transform: translate(-20px, -10px); }
+    100% { transform: translate(0, 0); }
+}

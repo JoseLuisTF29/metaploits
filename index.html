@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackeo en Proceso...</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="terminal">
+        <div id="main-console">
+            <p id="line1">Hackeando sistema de <span class="username">Gabriela Osorio</span>...</p>
+            <p id="line2" class="hidden">Accediendo a datos confidenciales...</p>
+            <p id="line3" class="hidden">Inyectando malware...</p>
+            <p id="line4" class="hidden">Recopilando contraseñas...</p>
+            <p id="countdown" class="hidden">Borrado del sistema en <span id="timer">10</span> segundos...</p>
+        </div>
+        <div class="cursor"></div>
+    </div>
+
+    <!-- Ventana emergente de alerta -->
+    <div id="popup-window" class="popup hidden">
+        <h2>Sistema comprometido</h2>
+        <p>Error crítico del sistema. Borrando datos...</p>
+        <div class="progress-bar"><div class="progress"></div></div>
+        <p><strong>Estado:</strong> Irreversible.</p>
+    </div>
+
+    <!-- Simulación de terminal de Linux -->
+    <div id="linux-terminal" class="popup hidden">
+        <h2>Terminal de Linux</h2>
+        <pre>$ sudo rm -rf /</pre>
+        <pre>$ ssh root@192.168.1.1</pre>
+        <pre>$ nmap -sS -p- 192.168.1.2</pre>
+        <p><strong>Estado:</strong> Ejecución en progreso...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
